@@ -1,64 +1,208 @@
-<html>
-    <head>
-        <title>kou's github page</title>
-        <style>
-            a:link {
-                text-decoration: inherit;
-                color: inherit;
-                cursor: auto;
-            }
-
-            a:visited {
-                text-decoration: inherit;
-                color: inherit;
-                cursor: auto;
-            }
-        </style>
-    </head>
-    <body style="color: white;  background-color: #c77666; overflow: hidden; height: 100vh; flex-direction: column; display: flex; justify-content: center; align-items: center">
-        <div style="height: 600px; width: 800px;">
-        <a href="#">
-            <div style="box-shadow: 0 0 10px #0000007f; border: 4px ridge #e6c9be; z-index:4; position: absolute; height: 600px; width: 800px; display:flex; flex-direction: column; justify-content: flex-end; padding: 8px; box-sizing: border-box">
-                <div style="display:flex; align-items: end">
-                    <div style="border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f;">
-                        <div style="width:100%; border-bottom: 4px ridge #e6c9be; background-color: #c77666; padding: 0px 5px; box-sizing: border-box; box-shadow: inset 0 0 2px black;">Kou (Programmer)</div>
-                        <img style="box-shadow: inset 0 0 10px black;" src="./assets/28.png">
-                    </div>
-                    <div style="border: 1px solid black; height: 130px; flex:1; border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f;">
-                        <div style="width:100%; height:100%; background-color:rgba(11, 57, 95, 0.57); padding: 5px 10px; box-sizing: border-box; box-shadow: inset 0 0 10px black; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Oh my V8 Engine!</div>
-                        </div>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kouhime (kou) Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      height: 100vh;
+    }
+    .ascii-effect {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="space-y-6">
+      <h1 class="text-5xl font-bold">Kouhime (kou)</h1>
+      <p class="text-xl italic">Oh my V8 Engine!</p>
+      <div class="mt-4 space-y-2">
+        <a href="https://kouhime.github.io/payung-event-editor/" class="underline hover:text-gray-300" target="_blank">
+          Payung Event Editor
         </a>
-        <div style="z-index:2; position: absolute; height: 600px; width: 800px; display:flex; flex-direction: column; padding: 8px; box-sizing: border-box">
-            <div style="width: 580px; height: 330px; border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f; background-color:rgba(11, 95, 77, 0.64); display: flex; flex-direction:column">
-                <div style="width:100%; border-bottom: 4px ridge #e6c9be; background-color: #c77666; padding: 0px 5px; box-sizing: border-box; box-shadow: inset 0 0 2px black;">Github Statistics
-                </div>
-                <div style="box-shadow: inset 0 0 10px black; width: 100%; flex: 1; padding: 12px">
-                    <div style="display:flex; gap:6px;">
-                        <div style="border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f; width: 100px; height: 100px; background-image: url(./assets/28.png); background-size: cover">
-                        </div>
-                        <div>
-                            <div >[Health: 320/413]</div>
-                            <div >[Level: 20/50]</div>
-                            <div >[Job: Backend Developer]</div>
-                        </div>
-                    </div>
-                    <div >[Python]</div>
-                    <div >[Typescript]</div>
-                    <div >[GDScript]</div>
-                    <div >...</div>
-                    <div >[PHP]</div>
-                    <div style="width: 100%; height: 100px; display:  flex; justify-content: center; align-items: center">
-                        <i>good at making oden</i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img style="object-fit: cover; height: 600px; width: 800px; filter: brightness(50%); z-index: 1; position: absolute" src="./assets/jesus-mcride.gif">
-        <img height="auto"  style="object-fit: cover; height: 600px; width: 800px; z-index: 3; position: absolute" src="./assets/Kou_-_Sengoku_Portrait.png">
-        </div>
-        <p>email: kou@pissmail.com</p>
-    </body>
+        <br>
+        <a href="https://kouhime.github.io/payung-tile-editor/" class="underline hover:text-gray-300" target="_blank">
+          Payung Tile Editor
+        </a>
+      </div>
+      <div class="mt-8 max-w-2xl mx-auto text-sm">
+        <p>
+          a hobbyist coder
+        </p>
+      </div>
+      <div id="animated-quote" class="mt-8 text-lg font-mono"></div>
+    </div>
+  </div>
 
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
+    import { AsciiEffect } from 'https://unpkg.com/three@0.152.2/examples/jsm/effects/AsciiEffect.js';
+
+    
+    let scene, camera, renderer, effect, plane, initialPositions;
+    const clock = new THREE.Clock();
+
+    initThree();
+    animate();
+
+    function initThree() {
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.1, 100);
+      camera.position.z = 5;
+
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0x000000);
+
+      
+      effect = new AsciiEffect(renderer, ' .:-+*#%@', { invert: true });
+      effect.setSize(window.innerWidth, window.innerHeight);
+      effect.domElement.style.color = 'white';
+      effect.domElement.style.backgroundColor = 'black';
+      effect.domElement.style.filter = 'brightness(0.2)';
+      effect.domElement.classList.add('ascii-effect');
+      document.body.appendChild(effect.domElement);
+
+      
+      const geometry = new THREE.PlaneGeometry(20, 20, 300, 300);
+      const material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+      plane = new THREE.Mesh(geometry, material);
+      scene.add(plane);
+
+      
+      const posAttr = plane.geometry.attributes.position;
+      initialPositions = new Float32Array(posAttr.array.length);
+      for (let i = 0; i < posAttr.array.length; i++) {
+        initialPositions[i] = posAttr.array[i];
+      }
+
+      window.addEventListener('resize', onWindowResize, false);
+    }
+
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      effect.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      const time = clock.getElapsedTime();
+      const posAttr = plane.geometry.attributes.position;
+
+      
+      for (let i = 0; i < posAttr.array.length; i += 3) {
+        const x = initialPositions[i];
+        const y = initialPositions[i+1];
+        const distance = Math.sqrt(x*x + y*y);
+        const angle = Math.atan2(y, x) + time; 
+        
+        const z = Math.sin(distance * 2 - time * 3 + angle * 2) * 0.5;
+        posAttr.array[i+2] = z;
+      }
+      posAttr.needsUpdate = true;
+      effect.render(scene, camera);
+    }
+
+    
+    class TextScramble {
+      constructor(el) {
+        this.el = el;
+        this.chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        this.update = this.update.bind(this);
+      }
+      setText(newText) {
+        const oldText = this.el.innerText;
+        const length = Math.max(oldText.length, newText.length);
+        const promise = new Promise((resolve) => this.resolve = resolve);
+        this.queue = [];
+        for (let i = 0; i < length; i++) {
+          const from = oldText[i] || '';
+          const to = newText[i] || '';
+          const start = Math.floor(Math.random() * 40);
+          const end = start + Math.floor(Math.random() * 40);
+          this.queue.push({ from, to, start, end, char: '' });
+        }
+        cancelAnimationFrame(this.frameRequest);
+        this.frame = 0;
+        this.update();
+        return promise;
+      }
+      update() {
+        let output = '';
+        let complete = 0;
+        for (let i = 0; i < this.queue.length; i++) {
+          let { from, to, start, end, char } = this.queue[i];
+          if (this.frame >= end) {
+            output += to;
+            complete++;
+          } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+              char = this.randomChar();
+              this.queue[i].char = char;
+            }
+            output += `<span class="text-gray-500">${char}</span>`;
+          } else {
+            output += from;
+          }
+        }
+        this.el.innerHTML = output;
+        if (complete === this.queue.length) {
+          this.resolve();
+        } else {
+          this.frameRequest = requestAnimationFrame(this.update);
+          this.frame++;
+        }
+      }
+      randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)];
+      }
+    }
+
+    const quotes = [
+      "おだんごどうぞ",
+      "ガードもバッチリです!!",
+      "ゆっ……許せな…いっ…　許せない……！！",
+      "……兄様以外の方は……嫌です",
+      "だから、兄様……",
+      "いえ、ランスさん……優しく、して、下さい……",
+      "おだんごどうぞ",
+      "美味しいお団子を皆に食べてもらう"
+    ];
+    const animatedQuoteEl = document.getElementById("animated-quote");
+    const fx = new TextScramble(animatedQuoteEl);
+    let counter = 0;
+    function nextQuote() {
+      fx.setText(quotes[counter]).then(() => {
+        setTimeout(nextQuote, 3000);
+      });
+      counter = (counter + 1) % quotes.length;
+    }
+    nextQuote();
+  </script>
+</body>
 </html>
