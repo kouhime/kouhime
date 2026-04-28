@@ -1,50 +1,131 @@
 <html>
     <head>
-        <title>kou's github page</title>
+        <title>Aldo Fakhry's Portfolio</title>
+        <style>
+            /* Simple styling for the portfolio cards to keep the HTML clean */
+            .project-card {
+                background-color: rgba(11, 57, 95, 0.7);
+                border: 4px ridge #e6c9be;
+                box-shadow: 0 0 10px #0000007f;
+                padding: 20px;
+                margin-bottom: 20px;
+                color: white;
+            }
+            .project-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #e6c9be;
+                padding-bottom: 5px;
+            }
+            .tech-stack {
+                color: #e6c9be;
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+                font-style: italic;
+            }
+            .project-desc {
+                line-height: 1.5;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+        </style>
     </head>
-    <body style="color: white;  background-color: #c77666; overflow: hidden; height: 100vh; flex-direction: column; display: flex; justify-content: center; align-items: center">
-        <div style="height: 600px; width: 800px;">
-        <div style="box-shadow: 0 0 10px #0000007f; border: 4px ridge #e6c9be; z-index:4; position: absolute; height: 600px; width: 800px; display:flex; flex-direction: column; justify-content: flex-end; padding: 8px; box-sizing: border-box">
-            <div style="display:flex; align-items: end">
-                <div style="border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f;">
-                    <div style="width:100%; border-bottom: 4px ridge #e6c9be; background-color: #c77666; padding: 0px 5px; box-sizing: border-box; box-shadow: inset 0 0 2px black;">Kou (Programmer)</div>
-                    <img style="box-shadow: inset 0 0 10px black;" src="./assets/28.png">
-                </div>
-                <div style="border: 1px solid black; height: 130px; flex:1; border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f;">
-                    <div style="width:100%; height:100%; background-color:rgba(11, 57, 95, 0.57); padding: 5px 10px; box-sizing: border-box; box-shadow: inset 0 0 10px black; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Oh my V8 Engine!</div>
+    <body style="color: white; background-color: #c77666; overflow-y: auto; min-height: 100vh; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 40px 0; font-family: sans-serif;">
+        
+        <div style="height: 600px; width: 800px; position: relative;">
+            <div style="box-shadow: 0 0 10px #0000007f; border: 4px ridge #e6c9be; z-index:4; position: absolute; height: 600px; width: 800px; display:flex; flex-direction: column; justify-content: flex-end; padding: 8px; box-sizing: border-box">
+                <div style="display:flex; align-items: end">
+                    <div style="border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f;">
+                        <div style="width:100%; border-bottom: 4px ridge #e6c9be; background-color: #c77666; padding: 0px 5px; box-sizing: border-box; box-shadow: inset 0 0 2px black;">Me (Programmer)</div>
+                        <img style="box-shadow: inset 0 0 10px black;" src="./assets/28.png">
                     </div>
-            </div>
-        </div>
-        <div style="z-index:2; position: absolute; height: 600px; width: 800px; display:flex; flex-direction: column; padding: 8px; box-sizing: border-box">
-            <div style="width: 580px; height: 330px; border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f; background-color:rgba(11, 95, 77, 0.64); display: flex; flex-direction:column">
-                <div style="width:100%; border-bottom: 4px ridge #e6c9be; background-color: #c77666; padding: 0px 5px; box-sizing: border-box; box-shadow: inset 0 0 2px black;">Github Statistics
-                </div>
-                <div style="box-shadow: inset 0 0 10px black; width; 100%; flex: 1; padding: 12px">
-                    <div style="display:flex; gap:6px;">
-                        <div style="border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f; width: 100px; height: 100px; background-image: url(./assets/28.png); background-size: cover">
+                    <div style="border: 1px solid black; height: 130px; flex:1; border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f;">
+                        <div style="width:100%; height:100%; background-color:rgba(11, 57, 95, 0.57); padding: 5px 10px; box-sizing: border-box; box-shadow: inset 0 0 10px black;">
+                            Welcome to my portfolio. I build scalable backend microservices, desktop tooling, and full-stack web applications.
                         </div>
-                        <div>
-                            <div >[Health: 320/413]</div>
-                            <div >[Level: 20/50]</div>
-                            <div >[Job: Backend Developer]</div>
-                        </div>
-                    </div>
-                    <div >[Python]</div>
-                    <div >[Typescript]</div>
-                    <div >[GDScript]</div>
-                    <div >...</div>
-                    <div >[PHP]</div>
-                    <div style="width: 100%; height: 100px; display:  flex; justify-content: center; align-items: center">
-                        <i>good at making oden</i>
-                        <!-- <img styzzzzzzzzzzzzzle="transform: scale(0.8)" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=kouhime&theme=moltack&layout=compact"> -->
                     </div>
                 </div>
             </div>
+            <div style="z-index:2; position: absolute; height: 600px; width: 800px; display:flex; flex-direction: column; padding: 8px; box-sizing: border-box">
+                <div style="width: 580px; height: 330px; border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f; background-color:rgba(11, 95, 77, 0.64); display: flex; flex-direction:column">
+                    <div style="width:100%; border-bottom: 4px ridge #e6c9be; background-color: #c77666; padding: 0px 5px; box-sizing: border-box; box-shadow: inset 0 0 2px black;">Developer Statistics</div>
+                    <div style="box-sizing: border-box; box-shadow: inset 0 0 10px black; width: 100%; flex: 1; padding: 12px">
+                        <div style="display:flex; gap:6px;">
+                            <div style="border: 4px ridge #e6c9be; box-shadow: 0 0 10px #0000007f; width: 100px; height: 100px; background-image: url(./assets/28.png); background-size: cover"></div>
+                            <div>
+                                <div>[Experience: 2.5 Years]</div>
+                                <div>[Level: 25/50]</div>
+                                <div>[Job: Back End / Full Stack]</div>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                            <div>[PHP / Laravel]</div>
+                            <div>[Vue.js]</div>
+                            <div>[Python]</div>
+                            <div>[MySQL / PostgreSQL]</div>
+                            <div>[Java / C++]</div>
+                            <div>[Bash / CI/CD]</div>
+                        </div>
+                        <div style="width: 100%; height: 100px; display: flex; justify-content: center; align-items: center">
+                            <i>good at preventing system bottlenecks</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img style="object-fit: cover; height: 600px; width: 800px; filter: brightness(50%); z-index: 1; position: absolute" src="./assets/jesus-mcride.gif">
+            <img height="auto" style="object-fit: cover; height: 600px; width: 800px; z-index: 3; position: absolute" src="./assets/Kou_-_Sengoku_Portrait.png">
         </div>
-        <img style="object-fit: cover; height: 600px; width: 800px; filter: brightness(50%); z-index: 1; position: absolute" src="./assets/jesus-mcride.gif">
-        <img height="auto"  style="object-fit: cover; height: 600px; width: 800px; z-index: 3; position: absolute" src="./assets/Kou_-_Sengoku_Portrait.png">
-        </div>
-        <p>email: kou@pissmail.com</p>
-    </body>
 
+        <div style="margin: 20px 0; text-align: center;">
+            <p>Email: <a style="color: white;" href="mailto:aldofakhry.email@gmail.com">aldofakhry.email@gmail.com</a></p>
+            <p>
+                <a style="color: #e6c9be;" href="https://www.linkedin.com/in/aldo-fakhry-9b330623b" target="_blank">LinkedIn</a> | 
+                <a style="color: #e6c9be;" href="#" target="_blank">GitHub</a>
+            </p>
+        </div>
+
+        <div style="width: 800px; display: flex; flex-direction: column;">
+            
+            <div class="project-card">
+                <div class="project-title">Payung Event Editor (Game Engine Tooling)</div>
+                <div class="tech-stack">Technologies: JavaScript, Electron, TailwindCSS, HTML, SQLite</div>
+                <div class="project-desc">
+                    A node-based visual editor desktop application designed to build game story flows, dialogue, and events for the "Payung" visual novel/RPG engine. Features a fully custom pannable and zoomable node canvas, real-time scene previews, conditional story branching logic, and multimedia asset management. All event data is structurally mapped and saved into an integrated SQLite database.
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">National E-Auction System & Bank Microservices</div>
+                <div class="tech-stack">Technologies: PHP/Laravel, MySQL, PostgreSQL, GitLab CI</div>
+                <div class="project-desc">
+                    Maintained and heavily optimized a nationwide electronic auction platform. Developed a RESTful API bridging the auction system with BNI and Mandiri banking services to handle high-stakes transactions (UJL) via virtual accounts. Overhauled the verification logic with a single optimized query, increasing system throughput by 45% and implementing automated fallback systems to prevent critical financial errors.
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Mestionola (Manga Translation Software)</div>
+                <div class="tech-stack">Technologies: Computer Vision, Agentic Pipeline, Python, Node JS</div>
+                <div class="project-desc">
+                    Built an experimental, context-aware manga translation tool that achieves output quality rivaling human translators. Integrated a custom typesetting feature with a rich text editor, allowing translators to directly edit and format manga texts seamlessly on the page.
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">FinTech Crediting & Scoring Management</div>
+                <div class="tech-stack">Technologies: Vue.js, Laravel</div>
+                <div class="project-desc">
+                    Developed full-stack loan scoring and crediting management systems. Designed the application flow to determine customer credit eligibility automatically, significantly reducing the bad-loan acceptance rate while expediting the legitimate crediting process by 40%.
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">Bare-Metal Homelab & Infrastructure</div>
+                <div class="tech-stack">Technologies: Advanced Bash Scripting, Linux, DevOps</div>
+                <div class="project-desc">
+                    Built, configured, and currently maintain a custom bare-metal server acting as a homelab. The environment is actively used to self-host personal projects, databases, and testing environments with fully customized routing and deployment pipelines.
+                </div>
+            </div>
+
+        </div>
+    </body>
 </html>
